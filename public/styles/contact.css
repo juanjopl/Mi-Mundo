@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "font1";
+    src: url("../assets/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    font-family: "font1";
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+    font-size: 16px;
+    background: none;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+
+input[type="text"]:active, input[type="email"]:active {
+    background: transparent;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3%;
+    width: 50%;
+    height: 600px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.info {
+    width: 50%;
+    height: 600px;
+        background: rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3%;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.form:hover, .info:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+ul li {
+    margin: 4% 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list > img {
+    width: 30px;
+    margin-right: 2%;
+    background-color: transparent;
+    padding: 1%;
+    border-radius: 100%;
+    border: 2px solid whitesmoke;
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+}
+
+.statusOK {
+    padding: 10px 20px;
+    background-color: rgb(65, 155, 65);
+    margin-left: 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.fadeIn {
+    animation-name: fadeOut;
+    animation-duration: .3s; /* Duración de la animación en segundos */
+    animation-fill-mode: forwards; /* Mantener el último estado de la animación */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: .5s; /* Duración de la animación en segundos */
+    animation-fill-mode: forwards; /* Mantener el último estado de la animación */
+}
+
+@media (max-width: 860px) {
+    .contact {
+        flex-direction: column;
+    }
+    .form, .info {
+        width: 100%;
+        height: auto;
+    }
+    button {
+        margin-bottom: 10px;
+    }
+    .form {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .info {
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (max-width: 505px) {
+    .form, .info {
+        width: 100%;
+    }
+    input[type="text"], input[type="email"], 
+    textarea, ::placeholder, .info-content span, button, .statusOK {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 470px) {
+    .sendForm {
+        display: flex;
+        flex-direction: column;
+    }
+    .statusOK {
+        margin: 0px;
+    }
+}

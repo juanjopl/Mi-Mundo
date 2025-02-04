@@ -1,0 +1,123 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #13111C;
+  }
+  
+  .projects-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid; /* Cambiado de flex a grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    grid-template-rows: repeat(2, auto); /* 2 filas automáticas */
+    gap: 2rem; /* Espacio entre los elementos */
+  }
+
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.1rem;
+    transition: box-shadow .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: whitesmoke;
+  }
+  
+  .project-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: center;
+  }
+  
+  .tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .project-button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .project-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+@media (max-width: 1024px) {
+    .project-card {
+      width: 100%;
+    }
+}
+@media (max-width: 430px) {
+  .project-links {
+    flex-direction: column;
+  }
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .project-image {
+    object-fit: cover;
+  }
+}
