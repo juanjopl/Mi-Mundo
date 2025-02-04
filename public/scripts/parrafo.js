@@ -1,8 +1,6 @@
-const text1 = `Antes de que continúe y conozca mis proyectos y habilidades, quiero informarle que soy un apasionado desarrollador web, graduado en Desarrollo de Aplicaciones Web (DAW). Con una mente abierta, estoy preparado para comenzar mi carrera de forma profesional. Mi motivación para aprender y mejorar es infinita, y mi ambición no tiene límites. Estoy listo para afrontar nuevos retos y aportar ideas innovadoras.`;
-const text2 = `Después de esta breve presentación, está list@ para conocer qué hice en estos dos últimos años`;
+const text1 = `Soy un desarrollador apasionado por crear experiencias visuales atractivas y fáciles de usar. También disfruto mejorando la forma en que se gestionan los datos para que todo funcione de manera más fluida y eficiente.`;
 
-const id1 = document.getElementById("parrafo1");
-const id2 = document.getElementById("parrafo2");
+const parrafo = document.getElementById("parrafo1");
 
 function typeText(text, id, delay = 10) {
     let i = 0;
@@ -19,8 +17,7 @@ function typeText(text, id, delay = 10) {
 }
 
 function type() {
-    typeText(text1, id1, 10);
-    setTimeout(() => typeText(text2, id2, 10), text1.length * 10 + 800);
+    typeText(text1, parrafo, 10);
 }
 
 window.addEventListener("load", type);
