@@ -16,6 +16,10 @@ form.onsubmit = (e) => {
         let formData = new FormData(form);
         xhr.send(formData);
         form.reset();
+        setTimeout(function() {
+            status.classList.remove('fadeIn');
+            status.classList.add('fadeOut');
+        }, 2000);
     }
 }
 

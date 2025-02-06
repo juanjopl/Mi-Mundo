@@ -114,12 +114,12 @@ ul li {
 }
 
 .fadeIn {
-    animation-name: fadeOut;
+    animation-name: fadeIn;
     animation-duration: .3s; /* Duración de la animación en segundos */
     animation-fill-mode: forwards; /* Mantener el último estado de la animación */
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -128,10 +128,19 @@ ul li {
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .fadeOut {
     animation-name: fadeOut;
-    animation-duration: .5s; /* Duración de la animación en segundos */
-    animation-fill-mode: forwards; /* Mantener el último estado de la animación */
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 860px) {
