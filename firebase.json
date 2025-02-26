@@ -14,6 +14,21 @@
   ],
   "hosting": {
     "public": "public",
+    "headers": [
+      {
+        "source": "public/assets/files/Curriculum.pdf",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
